@@ -1,0 +1,8 @@
+invocation=F:\Swarmalator–CAV\src\swarmalator_cav\run_stage1.py --config configs/stage1_config.json --out outputs/stage1
+python=F:\Swarmalator–CAV\.venv\Scripts\python.exe
+experiments=90
+methods=['A', 'B', 'C', 'D', 'E']
+scenarios=['ample', 'collaborative', 'short_window']
+disturbances=['none', 'prepare']
+init_variants=[0, 1, 2]
+figures={'representative': 'F:\\Swarmalator–CAV\\outputs\\stage1\\figures\\stage1_representative_trajectory.png', 'outcomes': 'F:\\Swarmalator–CAV\\outputs\\stage1\\figures\\stage1_method_outcomes.png', 'tradeoff': 'F:\\Swarmalator–CAV\\outputs\\stage1\\figures\\stage1_nonreciprocal_tradeoff.png'}

@@ -1,0 +1,8 @@
+{
+  "public_checks": 4,
+  "anchors": 20,
+  "main_regression": 72,
+  "mechanism_runs": 8,
+  "handoff_duration_s": 1.0,
+  "post_preview_s": 1.25
+}

@@ -1,0 +1,10 @@
+scenario,disturbance,init_variant,source,run_id,label,mission_ok,full_window_ok,completion_time_s,completion_s_m,min_h_mission_m,min_h_full_m,error,trials,wait_s,a_M_mps2,a_R_mps2
+ample,none,0,A,A_ample_none_i0,feasible_witness,1,1,4.2,159.96280651728785,0.08834251976448115,0.08834251976448115,,,,,
+ample,none,1,offline_candidate,offline_ample_none_i1_w2.5_m-1.0_r-2.0,feasible_witness,1,0,5.5,168.4656249999999,1.426874999999919,1.426874999999919,full_window_not_covered,85,2.5,-1.0,-2.0
+ample,none,2,offline_candidate,offline_ample_none_i2_w1.5_m-2.0_r-2.0,feasible_witness,1,0,4.5,154.93125,1.2975000000000074,1.2975000000000074,full_window_not_covered,49,1.5,-2.0,-2.0
+ample,prepare,0,A,A_ample_prepare_i0,feasible_witness,1,1,4.2,159.18675023152315,0.08834251976448115,0.08834251976448115,,,,,
+ample,prepare,1,offline_candidate,offline_ample_prepare_i1_w2.5_m-1.0_r-2.0,feasible_witness,1,0,5.5,168.4656249999999,1.426874999999919,1.426874999999919,full_window_not_covered,85,2.5,-1.0,-2.0
+ample,prepare,2,offline_candidate,offline_ample_prepare_i2_w1.5_m-2.0_r-2.0,feasible_witness,1,0,4.5,154.93125,1.2975000000000074,1.2975000000000074,full_window_not_covered,49,1.5,-2.0,-2.0
+collaborative,none,0,offline_candidate,offline_collaborative_none_i0_w1.5_m-2.0_r-2.0,feasible_witness,1,0,4.5,155.68124999999998,0.4562500000002174,0.4562500000002174,full_window_not_covered,49,1.5,-2.0,-2.0
+collaborative,none,2,A,A_collaborative_none_i2,feasible_witness,1,1,4.8,165.30770948377642,0.0965141655815982,0.0965141655815982,,,,,
+collaborative,prepare,0,offline_candidate,offline_collaborative_prepare_i0_w1.5_m-2.0_r-2.0,feasible_witness,1,0,4.5,155.68124999999998,0.33163473291590684,0.33163473291590684,full_window_not_covered,49,1.5,-2.0,-2.0

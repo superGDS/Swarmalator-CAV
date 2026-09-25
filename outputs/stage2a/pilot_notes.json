@@ -1,0 +1,10 @@
+{
+  "phase": "pre-freeze implementation smoke, not main comparisons",
+  "tests": [
+    "prediction step changed from accidental 0.10 to same 0.05 s",
+    "wait means preparation duration with action already active",
+    "5 anchors P/S1/S2/S3 geometric successes, oldC missed 3 collaborative anchors"
+  ],
+  "discarded_structure": "unvalidated added local q action; replaced before main regression with candidate-evaluated intensity state",
+  "runs": 26
+}

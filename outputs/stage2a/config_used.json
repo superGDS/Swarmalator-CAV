@@ -1,0 +1,43 @@
+{
+  "version": "stage2a_model_v3",
+  "simulation": {
+    "dt": 0.05,
+    "horizon": 16.0,
+    "merge_duration": 3.0,
+    "merge_ready_threshold": 0.45,
+    "a_min": -4.0,
+    "a_max": 2.5,
+    "jerk_max": 2.5,
+    "v_min": 0.0,
+    "v_max": 28.0,
+    "slot_buffer_m": 0.0,
+    "safety_recheck_tolerance_m": 0.15,
+    "refresh_s": 0.5,
+    "post_preview_s": 0.5,
+    "max_prepare_s": 2.5,
+    "reference_kp": 0.10,
+    "reference_kv": 0.40,
+    "z_step": 0.05,
+    "gradient_gain": 0.018,
+    "partner_total": 0.32,
+    "fixed_W": 0.40,
+    "intrinsic_M": 0.010,
+    "intrinsic_R": 0.016,
+    "planner_wait_values": [0.0, 0.5, 1.0, 1.5, 2.0, 2.5],
+    "planner_action_values": [1.0, 0.6666666666666666, 0.3333333333333333, 0.0],
+    "planner_max_candidates": 160,
+    "planner_action_effort_weight": 0.04,
+    "planner_wait_weight": 0.20
+  },
+  "methods": ["P", "S1", "S2", "S3", "oldC"],
+  "scenarios": ["ample", "collaborative", "short_window"],
+  "disturbances": ["none", "prepare"],
+  "init_variants": [0, 1, 2],
+  "anchors": [
+    ["collaborative", "none", 0],
+    ["collaborative", "prepare", 0],
+    ["collaborative", "none", 2],
+    ["ample", "none", 0],
+    ["ample", "prepare", 0]
+  ]
+}

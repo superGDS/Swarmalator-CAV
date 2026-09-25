@@ -1,0 +1,6 @@
+candidate_name,source,run_id,scenario,disturbance,init_variant,wait_s,a_M_mps2,a_R_mps2,mission_ok,full_window_ok,completion_time_s,completion_s_m,endpoint_ok,slot_ok,full_window_covered,min_h_mission_m,min_h_full_m,error
+ample_none_i0,saved_A,A_ample_none_i0,ample,none,0,,,,1,1,4.2,159.96280651728785,1,1,1,0.08834251976448115,0.08834251976448115,
+ample_prepare_i0,saved_A,A_ample_prepare_i0,ample,prepare,0,,,,1,1,4.2,159.18675023152315,1,1,1,0.08834251976448115,0.08834251976448115,
+collaborative_none_i0,prompt_candidate,known_collaborative_none_i0_w1.5_m-2.0_r-2.0,collaborative,none,0,1.5,-2.0,-2.0,1,0,4.5,155.68124999999998,1,1,0,0.4562500000002174,0.4562500000002174,full_window_not_covered
+collaborative_prepare_i0,prompt_candidate,known_collaborative_prepare_i0_w1.5_m-2.0_r-2.0,collaborative,prepare,0,1.5,-2.0,-2.0,1,0,4.5,155.68124999999998,1,1,0,0.33163473291590684,0.33163473291590684,full_window_not_covered
+collaborative_none_i2,prompt_candidate,known_collaborative_none_i2_w2.0_m-2.0_r-2.0,collaborative,none,2,2.0,-2.0,-2.0,1,0,5.0,161.05624999999998,1,1,0,0.006250000000234124,0.006250000000234124,full_window_not_covered

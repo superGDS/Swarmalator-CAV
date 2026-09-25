@@ -1,0 +1,14 @@
+{
+  "src\\swarmalator_cav\\run_stage1.py": "1f041bf7ed54a1ce3e051395669bf419e6f991c14e49fa61bd1d492a57543e23",
+  "src\\swarmalator_cav\\run_stage1b.py": "f5b3e073f7efaacc3fe489c57c83af3aac785aaf1eefb150f98f048d11380e2c",
+  "src\\swarmalator_cav\\run_stage1c.py": "7c242a7ed743362d95d93115f4ddc7c30ae9b6b420d22113b4aa50f2b794bc20",
+  "src\\swarmalator_cav\\stage1b_simulation.py": "a36106d54ff46663d346bba75a4f89a478425d24dee555e5ba584658d69794d5",
+  "src\\swarmalator_cav\\stage1c_check.py": "9c456a3b25b402c825c56ab28fa2a290fd26c982a255c2a736db4c91c655fd90",
+  "src\\swarmalator_cav\\stage1c_simulation.py": "846480344f42dac98a35cbdb176f24dc1066571a192a983dcdddaebc948286c9",
+  "configs\\stage1b_config.json": "1a408c2eed0bc90a057a643c123e443f55f8856f6651dfb357aba833c113fb51",
+  "configs\\stage1c_config.json": "1d2161da9ad0c2f7a4c75ff277f82d8b3e15076f08baedcb5c171b37f472cacb",
+  "configs\\stage1_config.json": "1e12dbf95deecd3889362ce5f5eef0ffc9a4bf331a4c94b33d18a38a1e4605ec",
+  "feedback\\stage1b_feedback.zip": "36acff057d0d85959806a3a9b517c5f15f900edf4de9fc704be424c6615cd67d",
+  "feedback\\stage1c_feedback.zip": "c82a884272e6e41b95a42d6b68f578a64e950db51425a301dc449a9efcce9fd8",
+  "feedback\\stage1_feedback.zip": "6dd218320a82ad1ccf3a0e263260af354912b3c0e583b2ac95f0bcc034810cc5"
+}

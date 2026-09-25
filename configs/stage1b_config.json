@@ -1,0 +1,32 @@
+{
+  "version": "stage1b_model_v1",
+  "simulation": {
+    "dt": 0.05,
+    "horizon": 16.0,
+    "merge_duration": 3.0,
+    "merge_ready_threshold": 0.45,
+    "a_min": -4.0,
+    "a_max": 2.5,
+    "jerk_max": 2.5,
+    "nu_M": 0.42,
+    "nu_R": 0.36,
+    "kappa_M": 0.55,
+    "kappa_R": 0.50,
+    "k_total": 0.34,
+    "alpha": 1.5707963267948966,
+    "slot_buffer_m": 0.0,
+    "safety_recheck_tolerance_m": 0.15
+  },
+  "methods": ["A", "B", "C", "D", "E"],
+  "scenarios": ["ample", "collaborative", "short_window"],
+  "disturbances": ["none", "prepare"],
+  "init_variants": [0, 1, 2],
+  "intervention_environments": [
+    ["ample", "none", 0],
+    ["ample", "prepare", 2],
+    ["collaborative", "none", 0],
+    ["collaborative", "prepare", 1],
+    ["short_window", "none", 0],
+    ["short_window", "prepare", 2]
+  ]
+}

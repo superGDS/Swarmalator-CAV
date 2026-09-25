@@ -1,0 +1,17 @@
+{
+  "config": "F:\\Swarmalator\u2013CAV\\configs\\stage2b_config.json",
+  "counts": {
+    "public_checks": 4,
+    "anchors": 20,
+    "regression": 52,
+    "main": 72,
+    "validation_rows": 80,
+    "mechanism": 8,
+    "paired_rows": 108
+  },
+  "figures": {
+    "chain": "F:\\Swarmalator\u2013CAV\\outputs\\stage2b\\figures\\collaboration_handoff_recovery.png",
+    "paired": "F:\\Swarmalator\u2013CAV\\outputs\\stage2b\\figures\\paired_same_service.png",
+    "coupling": "F:\\Swarmalator\u2013CAV\\outputs\\stage2b\\figures\\coupling_direction_allocation.png"
+  }
+}

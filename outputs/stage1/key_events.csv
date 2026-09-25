@@ -1,0 +1,7 @@
+run_id,t_s,event,details
+A_ample_none_i0,0.6500000000000001,merge_started,
+A_ample_none_i0,3.65,merge_completed,
+D_collaborative_prepare_i1,3.25,merge_started,
+D_collaborative_prepare_i1,5.4,merge_exit_before_completion,started_but_failed
+E_collaborative_none_i0,3.85,merge_started,
+E_collaborative_none_i0,5.2,merge_exit_before_completion,started_but_failed

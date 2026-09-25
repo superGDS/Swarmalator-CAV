@@ -1,0 +1,7 @@
+invocation=F:\Swarmalator–CAV\src\swarmalator_cav\run_stage1b.py --config configs/stage1b_config.json --out outputs/stage1b
+python=F:\Swarmalator–CAV\.venv\Scripts\python.exe
+primary_runs=90
+feasibility_environments=18
+intervention_runs=36
+same_snapshot_rows=56
+figures={'startup': 'F:\\Swarmalator–CAV\\outputs\\stage1b\\figures\\stage1b_startup_feasibility.png', 'q_feedback': 'F:\\Swarmalator–CAV\\outputs\\stage1b\\figures\\stage1b_effective_q_feedback.png', 'strata': 'F:\\Swarmalator–CAV\\outputs\\stage1b\\figures\\stage1b_cost_by_feasibility.png'}

@@ -1,0 +1,4 @@
+This audit wrote only outputs/stage1b/audit. It did not invoke run_stage1, overwrite outputs/stage1, or modify source/config/report files.
+feedback_zip=F:\Swarmalator–CAV\feedback\stage1_feedback.zip
+old_metrics=F:\Swarmalator–CAV\outputs\stage1\metrics.csv
+config=F:\Swarmalator–CAV\configs\stage1_config.json

@@ -1,0 +1,23 @@
+# Local Python environments and caches
+.venv/
+venv/
+env/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+
+# Local tooling and editor state
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+
+# Local secrets and transient logs
+.env
+.env.*
+*.log
+

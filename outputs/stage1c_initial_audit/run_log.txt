@@ -1,0 +1,9 @@
+invocation=F:\Swarmalator–CAV\src\swarmalator_cav\run_stage1c.py --config configs/stage1c_config.json --out outputs/stage1c
+python=F:\Swarmalator–CAV\.venv\Scripts\python.exe
+primary_runs=90
+feasibility_environments=18
+strict_witnesses=9
+intervention_rows=60
+original_rechecks=17
+diagnostics=20
+figures={'task_window': 'F:\\Swarmalator–CAV\\outputs\\stage1c\\figures\\task_window_space.png', 'q_action': 'F:\\Swarmalator–CAV\\outputs\\stage1c\\figures\\q_action_chain.png', 'costs': 'F:\\Swarmalator–CAV\\outputs\\stage1c\\figures\\costs_all_vs_witness.png'}

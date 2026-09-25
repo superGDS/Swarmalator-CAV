@@ -1,0 +1,4 @@
+Stage 1 feedback package
+Included: README.md, AGENTS.md, prompt provenance, model documentation, literature access notes, source, tests, configuration, reports, metrics, vehicle metrics, events, key trajectories/events, run log, and three figures.
+Excluded: .venv, caches, the complete trajectories.csv, original paper full texts, and secrets.
+Reproduce: .\.venv\Scripts\python.exe -m pytest -q; .\.venv\Scripts\python.exe -m src.swarmalator_cav.run_stage1 --config configs/stage1_config.json --out outputs/stage1

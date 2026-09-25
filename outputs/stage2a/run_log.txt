@@ -1,0 +1,15 @@
+{
+  "config": "F:\\Swarmalator\u2013CAV\\configs\\stage2a_config.json",
+  "counts": {
+    "anchors": 25,
+    "regression": 65,
+    "main": 90,
+    "validation": 96,
+    "ablation": 6
+  },
+  "figures": {
+    "plan_generation": "F:\\Swarmalator\u2013CAV\\outputs\\stage2a\\figures\\plan_generation_anchor.png",
+    "space_process_action": "F:\\Swarmalator\u2013CAV\\outputs\\stage2a\\figures\\space_process_action_chain.png",
+    "tradeoff": "F:\\Swarmalator\u2013CAV\\outputs\\stage2a\\figures\\validity_cost_compute_tradeoff.png"
+  }
+}

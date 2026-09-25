@@ -1,0 +1,9 @@
+run_id,t_s,event,details
+A_ample_none_i0,0.0,startup_physical_check,"{'in_start_zone': True, 'slot_ok': False, 'necessary_bound_ok': True, 'remaining_distance_m': 96.0, 'min_forward_distance_m': 55.849300000000085, 'interval_width_m': 7.400000000000006, 'current_speed_forecast_min_slot_width_m': 7.399999999999999, 'current_speed_forecast_min_front_margin_m': 1.0, 'current_speed_forecast_min_rear_margin_m': -4.1000000000000005, 'physical_ok': False}"
+A_ample_none_i0,1.2000000000000002,merge_started,
+A_ample_none_i0,4.2,merge_completed,
+D_ample_none_i0,0.0,startup_physical_check,"{'in_start_zone': True, 'slot_ok': False, 'necessary_bound_ok': True, 'remaining_distance_m': 96.0, 'min_forward_distance_m': 55.849300000000085, 'interval_width_m': 7.400000000000006, 'current_speed_forecast_min_slot_width_m': 7.399999999999999, 'current_speed_forecast_min_front_margin_m': 1.0, 'current_speed_forecast_min_rear_margin_m': -4.1000000000000005, 'physical_ok': False}"
+D_ample_none_i0,1.2500000000000002,merge_started,
+D_ample_none_i0,4.25,merge_completed,
+E_collaborative_none_i0,0.0,startup_physical_check,"{'in_start_zone': True, 'slot_ok': False, 'necessary_bound_ok': True, 'remaining_distance_m': 94.0, 'min_forward_distance_m': 54.349300000000085, 'interval_width_m': -1.424999999999983, 'current_speed_forecast_min_slot_width_m': -1.425000000000015, 'current_speed_forecast_min_front_margin_m': -6.824999999999998, 'current_speed_forecast_min_rear_margin_m': -5.1000000000000005, 'physical_ok': False}"
+E_collaborative_none_i0,4.7,missed_window,missed_window
