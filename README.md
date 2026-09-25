@@ -1,42 +1,56 @@
-# Swarmalator–CAV Stage 1
+# Swarmalator–CAV
 
-This workspace contains a CPU-only four-vehicle merge prototype for testing a swarmalator-inspired space–process coordination hypothesis. M is the merging CAV, R is the CAV behind the target gap, F is the dynamic front boundary, and B is a closed-loop ordinary following vehicle behind R. The implementation compares:
+This repository is the reproducible snapshot of the four-vehicle Swarmalator–CAV study through **Stage 2B**. The current model and results are the finite, CPU-only closed-loop prototype in `src/swarmalator_cav` and `outputs/stage2b`. Stage 1, Stage 1B, Stage 1C and Stage 2A evidence is preserved alongside it; later outputs do not overwrite the earlier evidence.
 
-* A: ordinary space gap/speed coordination;
-* B: one-way internal process → space coordination;
-* C: bidirectional symmetric coupling;
-* D: bidirectional state-dependent non-reciprocal allocation with fixed pair gain sum;
-* E: an independent rolling candidate timing baseline.
+The four longitudinal vehicles are M (the merging CAV), R (the vehicle behind the target gap), F (the dynamic front boundary), and B (the ordinary closed-loop follower behind R). The Stage 2B public arms are:
 
-All five methods share the same observations, finite-body geometry, horizon, acceleration/jerk-limited executor, safety correction, lateral execution path, and success test. F receives a deterministic preparation disturbance in the disturbed condition. B follows R through a closed-loop IDM-like law. The full first-round matrix is 90 evaluations.
+* **P**: finite prediction and candidate timing/space preparation;
+* **S1**: the same prediction and execution path with the added gradient and partner terms disabled;
+* **S2**: prediction plus task-potential feedback and symmetric partner action;
+* **S3**: the same public base with state-dependent non-reciprocal allocation.
 
-## Environment and commands
+The study reports geometry completion, mission validity, full-window validity, all affected-vehicle costs, nominal/actuated/safety-projected/actual actions, handoff behavior, and unresolved finite-search failures. It does not assume that S3 wins, and it does not treat common prediction or handoff repairs as a S3-only contribution. Search failure is logged as unresolved rather than being called physical infeasibility.
 
-The project uses an isolated Python 3.12 environment. From PowerShell:
+## What is in the repository
+
+* `src/swarmalator_cav/` — Stage 1 through Stage 2B simulators, controllers, predictors, independent checkers, and runners.
+* `configs/` — the exact JSON configurations used for each stage.
+* `outputs/stage1`, `outputs/stage1b`, `outputs/stage1c`, `outputs/stage1c_initial_audit`, `outputs/stage2a`, `outputs/stage2b` — CSV ledgers, complete/key trajectories, event logs, validation ledgers, figures, and run logs.
+* `reports/` and `docs/` — model revisions, validation notes, and stage reports. `docs/model_v4.md` describes the current Stage 2B model.
+* `feedback/` — compact transfer packages and manifests for every completed stage, including `feedback/stage2b_feedback.zip`.
+* `references/literature_notes.md` — the literature record and access notes used in the study.
+* `codex_swarmalator_*_prompt.md` — the stage-specific research instructions supplied for the project.
+
+The complete trajectory tables are retained in the stage output directories. The compact feedback zips contain the files needed to reconstruct the reported checks and key trajectories without depending on the local virtual environment.
+
+## Reproduce the current snapshot
+
+The project uses Python, NumPy, Matplotlib, and pytest. The local `.venv`, Python caches, editor state, and transient logs are deliberately excluded from version control.
+
+From PowerShell on Windows:
 
 ```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m src.swarmalator_cav.run_stage1 --config configs/stage1_config.json --out outputs/stage1
+.\.venv\Scripts\python.exe -m src.swarmalator_cav.run_stage2b --config configs/stage2b_config.json --out outputs/reproduce_stage2b
 ```
 
-The runner writes `outputs/stage1/trajectories.csv`, `events.csv`, `metrics.csv`, `vehicle_metrics.csv`, `run_log.txt`, and three PNG figures. The generated report is `reports/stage1_report.md`. A compact transfer package is created with:
+Use a new output directory such as `outputs/reproduce_stage2b` when checking the repository so the frozen `outputs/stage2b` evidence is not replaced. The Stage 2B runner performs four public diagnostics, five anchors reused in the matrix, the finite regression matrix, same-state and mechanism checks, figures, validation ledgers, and a compact feedback package. The exact counts and hashes are recorded in `outputs/stage2b/run_log.txt`, `outputs/stage2b/pilot_notes.json`, and `outputs/stage2b/frozen_evidence_hashes.json`.
+
+The earlier runners can be reproduced in the same way with their matching configuration and a separate output directory:
 
 ```powershell
-Compress-Archive -Path README.md,AGENTS.md,docs,configs,src,tests,outputs/stage1,reports -DestinationPath feedback/stage1_feedback.zip -Force
+.\.venv\Scripts\python.exe -m src.swarmalator_cav.run_stage1 --config configs/stage1_config.json --out outputs/reproduce_stage1
+.\.venv\Scripts\python.exe -m src.swarmalator_cav.run_stage1b --config configs/stage1b_config.json --out outputs/reproduce_stage1b
+.\.venv\Scripts\python.exe -m src.swarmalator_cav.run_stage1c --config configs/stage1c_config.json --out outputs/reproduce_stage1c
+.\.venv\Scripts\python.exe -m src.swarmalator_cav.run_stage2a --config configs/stage2a_config.json --out outputs/reproduce_stage2a
 ```
 
-For the compact feedback package, include `outputs/stage1/metrics.csv`, `vehicle_metrics.csv`, `events.csv`, `key_trajectories.csv`, `key_events.csv`, `run_log.txt`, and `figures` rather than the 44 MB complete `trajectories.csv`:
+## Scope and limits
 
-```powershell
-Compress-Archive -Path README.md,AGENTS.md,docs,configs,src,tests,reports,outputs/stage1/metrics.csv,outputs/stage1/vehicle_metrics.csv,outputs/stage1/events.csv,outputs/stage1/key_trajectories.csv,outputs/stage1/key_events.csv,outputs/stage1/run_log.txt,outputs/stage1/figures -DestinationPath feedback/stage1_feedback.zip -Force
-```
+This is a finite deterministic development and regression study with declared observations, finite-body geometry, bounded acceleration/jerk execution, safety projection, lateral merge progress, and a closed-loop IDM-like B follower. It is not SUMO, CARLA, a bicycle model, MARL training, a communication-delay/noise study, a reachability proof, or a road-safety certification. The candidate equations are treated as a research design and are checked for units, feedback direction, information dependency, saturation, and terminal behavior in the stage reports.
 
-The package excludes the virtual environment, caches, the complete trajectory table, and papers. The final zip is regenerated after the runner and tests finish.
+For an independent review, start with `reports/stage2b_report.md`, `reports/stage2b_validation.md`, `outputs/stage2b/paired_summary.csv`, `outputs/stage2b/mechanism.csv`, and `outputs/stage2b/figures/`, then use the earlier stage reports and frozen feedback hashes to trace the revisions.
 
-## Scope and current status
 
-This is a controlled prototype. It uses longitudinal point-mass dynamics and a continuous lateral path for M; it is not SUMO, CARLA, a bicycle model, MARL, a wireless network, or a road-safety guarantee. The candidate equations are treated as an independent project design. The RA-L swarmalator paper and the CAV opinion-dynamics paper are recorded in `references/literature_notes.md` with their full-text access limits.
-
-## Stage route
-
-Stage 1 establishes mechanism and implementation evidence. A later stage may add verified feasibility envelopes, message delay/loss, stronger timing optimization, and SUMO/CARLA validation. No such expansion is included in this run.
